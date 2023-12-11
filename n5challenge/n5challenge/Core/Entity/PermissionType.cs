@@ -4,6 +4,8 @@
     {
         public string Description { get; set; }
 
+        public virtual ICollection<Permission> Permissions { get; set; }
+
         public PermissionType() {}
     }
 }

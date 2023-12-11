@@ -6,9 +6,11 @@ namespace n5challenge.Core.Entity
     public record Permission : IEntity
     {        
         public string EmployeeForename { get; set; }
-        public string EmployeeSurname { get; set; }
+        public string EmployeeSurname { get; set; } 
         public int PermissionType { get; set; }
         public DateTime PermissionDate { get; set; }
+
+        public virtual PermissionType PermissionTypeObject { get; set; }
 
         public Permission() { }
 

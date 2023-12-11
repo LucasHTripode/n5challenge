@@ -15,6 +15,5 @@ namespace n5challenge.Infraestructure.EntityFramework.ConfigureEntity
             entity.Property(p => p.Id).HasColumnName("Id").HasColumnType("NUMBER(10)").IsRequired();
             entity.Property(p => p.Description).HasColumnName("Description").HasColumnType("VARCHAR(100)");
         }
-
     }
 }

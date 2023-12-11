@@ -19,6 +19,8 @@ namespace n5challenge.Infraestructure.EntityFramework.ConfigureEntity
             entity.Property(p => p.EmployeeSurname).HasColumnName("EmployeeSurname").HasColumnType("VARCHAR(100)");
             entity.Property(p => p.PermissionType).HasColumnName("PermissionType").HasColumnType("NUMBER(10)");
             entity.Property(p => p.PermissionDate).HasColumnName("PermissionDate").HasColumnType("DATE");
+
+            entity.HasOne(x => x.PermissionTypeObject).WithMany(x => x.Permissions).HasForeignKey(x => x.PermissionType);
         }
     }
 }
